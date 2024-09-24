@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 flex justify-between items-center p-6 lg:px-20">
+    <div class="flex items-center space-x-6">
+        <a href="blog.html" id="blog-button" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Blog</a>
+
+    </div>
+    <div class="flex items-center">
+      <img src="assets/logo.png" alt="Logo" class="h-12 lg:h-16">
+      <h1 class="ml-4 text-xl lg:text-3xl font-bold">Donate Bangladesh</h1>
+    </div>
+    <div class="flex items-center space-x-2">
+      <img src="assets/coin.png" alt="Coin" class="h-6 lg:h-8">
+      <span id="balance" class="font-semibold text-yellow-500 text-lg lg:text-2xl">5500 BDT</span>
+    </div>
+  </nav>
+
+  <!-- Tab Navigation -->
+  <div class="mt-4 flex justify-center space-x-4">
+    <button class="tablinks active px-6 py-3 bg-green-500 text-white rounded-md" onclick="openTab('donation')">Donation</button>
+    <button class="tablinks px-6 py-3 bg-gray-300 text-gray-700 rounded-md" onclick="openTab('history')">History</button>
+  </div>
+
+  <!-- Donation Cards Section -->
+  <div id="donation" class="tabcontent mt-6 max-w-6xl mx-auto space-y-8">
+
+    <!-- Donation Card 1 -->
+    <div class="bg-white p-8 rounded-lg shadow-lg flex space-x-8 border border-gray-200">
+      <img src="assets/noakhali.png" alt="Flood Image" class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-md">
+      <div class="flex-1">
+        <div class="flex justify-between items-center">
+          <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-semibold flex items-center space-x-1">
+            <img src="assets/coin.png" alt="Coin Icon" class="h-6 w-6">
+            <span id="current-donation-1">0 BDT</span>
+          </span>
+        </div>
+        <h3 class="text-lg lg:text-2xl font-bold mt-2">Donate for Flood at Noakhali, Bangladesh</h3>
+        <p class="text-gray-600 mt-4 lg:text-lg">
+          The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+        </p>
+        <input type="number" id="donation-input-1" placeholder="Write Donation Amount" class="border mt-4 p-2 w-full rounded-md">
+        <button onclick="donate(1)" class="bg-green-500 text-white px-6 py-3 rounded-md w-full mt-4 hover:bg-green-600">Donate Now</button>
+      </div>
+    </div>
+
+    <!-- Donation Card 2 -->
+    <div class="bg-white p-8 rounded-lg shadow-lg flex space-x-8 border border-gray-200">
+      <img src="assets/feni.png" alt="Flood Image" class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-md">
+      <div class="flex-1">
+        <div class="flex justify-between items-center">
+          <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-semibold flex items-center space-x-1">
+            <img src="assets/coin.png" alt="Coin Icon" class="h-6 w-6">
+            <span id="current-donation-2">600 BDT</span>
+          </span>
+        </div>
+        <h3 class="text-lg lg:text-2xl font-bold mt-2">Donate for Flood Relief in Feni, Bangladesh</h3>
+        <p class="text-gray-600 mt-4 lg:text-lg">
+          The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster.
+        </p>
+        <input type="number" id="donation-input-2" placeholder="Write Donation Amount" class="border mt-4 p-2 w-full rounded-md">
+        <button onclick="donate(2)" class="bg-green-500 text-white px-6 py-3 rounded-md w-full mt-4 hover:bg-green-600">Donate Now</button>
+      </div>
+    </div>
+
+    <!-- Donation Card 3 -->
+    <div class="bg-white p-8 rounded-lg shadow-lg flex space-x-8 border border-gray-200">
+      <img src="assets/quota-protest.png" alt="Quota Movement Image" class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-md">
+      <div class="flex-1">
+        <div class="flex justify-between items-center">
+          <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-semibold flex items-center space-x-1">
+            <img src="assets/coin.png" alt="Coin Icon" class="h-6 w-6">
+            <span id="current-donation-3">2400 BDT</span>
+          </span>
+        </div>
+        <h3 class="text-lg lg:text-2xl font-bold mt-2">Aid for Injured in the Quota Movement</h3>
+        <p class="text-gray-600 mt-4 lg:text-lg">
+          The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time.
+        </p>
+        <input type="number" id="donation-input-3" placeholder="Write Donation Amount" class="border mt-4 p-2 w-full rounded-md">
+        <button onclick="donate(3)" class="bg-green-500 text-white px-6 py-3 rounded-md w-full mt-4 hover:bg-green-600">Donate Now</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- History Section -->
+  <div id="history" class="tabcontent mt-6 max-w-6xl mx-auto space-y-8 hidden">
+    <h3 class="text-xl font-bold">Donation History</h3>
+    <div id="history-list" class="bg-white p-8 rounded-lg shadow-lg space-y-8">
+      <!-- History will be added dynamically -->
+    </div>
+  </div>
+
+  <!-- Success -->
+  <div id="donation-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-12 rounded-lg shadow-lg w-96 lg:w-128 text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold text-green-500 mb-6">Congrats!</h2>
+      <img src="assets/coin.png" alt="Coin" class="mx-auto h-12">
+      <p class="text-lg mt-6">You have donated for humankind <span class="text-green-600 font-bold">successfully</span></p>
+      <button onclick="closeModal()" class="mt-6 px-4 py-3 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Close Confirmation</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    let balance = 5500;  
+
+    // Tab switching function
+    function openTab(tabName) {
+      document.querySelectorAll(".tabcontent").forEach(content => content.classList.add('hidden'));
+      document.getElementById(tabName).classList.remove('hidden');
+
+      document.querySelectorAll(".tablinks").forEach(btn => btn.classList.remove('bg-green-500', 'text-white'));
+      event.currentTarget.classList.add('bg-green-500', 'text-white');
+    }
+
+    // Donation functionality
+    function donate(cardId) {
+      const donationInput = document.getElementById(`donation-input-${cardId}`).value;
+      const currentDonation = document.getElementById(`current-donation-${cardId}`);
+      const historySection = document.getElementById('history-list');
+
+      if (!validateInput(donationInput)) {
+        alert("Invalid donation amount.");
+        return;
+      }
+
+      const donationAmount = parseFloat(donationInput);
+
+      if (donationAmount > balance) {
+        alert("Insufficient balance.");
+        return;
+      }
+
+      
+      balance -= donationAmount;
+      document.getElementById('balance').innerText = `${balance} BDT`;
+
+    
+      const currentDonationAmount = parseFloat(currentDonation.innerText.replace(' BDT', ''));
+      currentDonation.innerText = `${currentDonationAmount + donationAmount} BDT`;
+
+      
+      const date = new Date();
+      const historyItem = `
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+          <p class="font-bold">${donationAmount} Taka is Donated for ${document.querySelector(`#donation-input-${cardId}`).placeholder.split(' ')[3]}</p>
+          <p>Date: ${date.toUTCString()} (Bangladesh Standard Time)</p>
+        </div>`;
+      historySection.innerHTML += historyItem;
+
+      
+      showModal();
+    }
+
+    
+    function validateInput(input) {
+      return input && !isNaN(input) && input > 0;
+    }
+
+    
+    function showModal() {
+      document.getElementById("donation-modal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("donation-modal").classList.add("hidden");
+    }
+  </script>
+
+</body>
+</html>

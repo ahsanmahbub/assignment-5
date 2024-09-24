@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Donate Bangladesh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    h3:hover {
+      color: #16a34a; 
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 flex justify-between items-center p-6 lg:px-20 z-10">
+    <div class="flex items-center space-x-6">
+      <button id="home-button" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Home</button>
+    </div>
+    <div class="flex items-center">
+      <img src="assets/logo.png" alt="Logo" class="h-12 lg:h-16">
+      <h1 class="ml-4 text-xl lg:text-3xl font-bold text-gray-800">Donate Bangladesh Blog</h1>
+    </div>
+    <div class="flex items-center space-x-2">
+      <img src="assets/coin.png" alt="Coin" class="h-6 lg:h-8">
+      <span id="balance" class="font-semibold text-yellow-500 text-lg lg:text-2xl">5500 BDT</span>
+    </div>
+  </nav>
+
+  <!-- Blog Content -->
+  <div class="max-w-6xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-2xl">
+    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-800 mb-6 border-b-4 border-green-500 pb-2">Important FAQ - DOM in JavaScript</h2>
+
+    <!-- FAQ Question 1 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold mb-3 transition duration-300">1. What is the Document Object Model (DOM)?</h3>
+      <p class="text-gray-700 lg:text-lg leading-relaxed">
+        The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing developers to interact with the content, structure, and styles of a webpage dynamically through scripting languages like JavaScript.
+      </p>
+    </div>
+
+    <!-- FAQ Question 2 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold mb-3 transition duration-300">2. How do you select an element from the DOM?</h3>
+      <p class="text-gray-700 lg:text-lg leading-relaxed">
+        You can select an element from the DOM using methods like <code class="bg-gray-200 px-1 py-0.5 rounded-md">document.getElementById()</code>, <code class="bg-gray-200 px-1 py-0.5 rounded-md">document.querySelector()</code>, or <code class="bg-gray-200 px-1 py-0.5 rounded-md">document.getElementsByClassName()</code>. These methods allow you to access specific elements based on their IDs, classes, or selectors.
+      </p>
+    </div>
+
+    <!-- FAQ Question 3 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold mb-3 transition duration-300">3. What is event delegation in the context of the DOM, and why is it useful?</h3>
+      <p class="text-gray-700 lg:text-lg leading-relaxed">
+        Event delegation is a technique in JavaScript that allows you to attach a single event listener to a parent element instead of adding multiple listeners to individual child elements. The event listener listens to events triggered by child elements and determines what triggered the event using event bubbling. It’s useful for dynamically added elements and improves performance by reducing the number of event listeners in a document.
+      </p>
+    </div>
+
+    <!-- FAQ Question 4 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold mb-3 transition duration-300">4. How do you manipulate an element's attributes and styles using the DOM?</h3>
+      <p class="text-gray-700 lg:text-lg leading-relaxed">
+        You can manipulate an element's attributes using methods like <code class="bg-gray-200 px-1 py-0.5 rounded-md">setAttribute()</code> and <code class="bg-gray-200 px-1 py-0.5 rounded-md">getAttribute()</code>. To manipulate styles, you can access the <code class="bg-gray-200 px-1 py-0.5 rounded-md">style</code> property of an element and assign values to CSS properties, for example, <code class="bg-gray-200 px-1 py-0.5 rounded-md">element.style.color = 'blue';</code>.
+      </p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="text-center">
+      <button id="back-button" class="mt-8 bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 transition duration-300">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- Script  -->
+  <script>
+    document.getElementById('home-button').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('back-button').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>
